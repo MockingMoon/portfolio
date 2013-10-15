@@ -1,0 +1,797 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: "BariolRegular";
+	font-size: 20px;
+	line-height: 1.5em;
+}
+
+strong, em{
+	font-size:inherit;
+	font-weight: normal;
+	font-style: normal;
+}
+
+a img{
+	border:none;
+}
+
+/*******************
+	MOBILE BASE
+*******************/
+
+.no-mobile{
+	display:none;
+}
+
+div#nav-header{
+	width: 100%;
+	height:60px;
+	position: fixed;
+	z-index: 5;
+	top:0;
+	background-color: @white;
+	border-bottom: 1px solid @grey;
+	img{
+		display: block;
+		height:40px;
+		width:auto;
+		margin:10px;
+	}
+	nav#main-menu{
+		display:none;
+	}
+}
+
+#index{
+
+	width:100%;
+
+	header#landing{
+		padding: 65px 10px 12px 10px;
+		background-color:@blue;
+		color: @white;
+		text-align:center;
+		#intro{
+			#knolling{
+				display:none;
+			}
+			#quote{
+				font-family: "BariolBold";
+				font-size:1.3em;
+			}
+			h1{
+				font-size: 0.7em;
+				font-weight: normal;
+				margin-bottom: 0.3em;
+				margin-top:0.5em;
+			}
+		}
+	}
+
+	.cat-header{
+		background-color: @white;
+		font-size: 1em;
+		text-align: center;
+		padding-bottom: 0.5em;
+		margin-bottom: 5px;
+		border-bottom:1px solid @grey;
+		padding-top: 0.5em;
+
+	}
+
+	section#projects{
+		article.project{
+			padding-top:20px;
+			border-bottom: 1px solid @grey;
+			div.project-header{
+				width:100%;
+				height:115px;
+				overflow:hidden;
+				div.p25{
+					width:25%;
+					float:left;
+					margin-left:6.25%;
+					padding-top:10px;
+					img{
+						position: relative;
+						width:100%;
+					}
+					h2{
+						font-family: "BariolBold";
+						font-size:0.8em;
+						font-weight: normal;
+						margin-bottom: 0.1em;
+					}
+					.details{
+						cursor: pointer;
+						font-size: 0.54em;
+						background-color: #00BDFF;
+						color:#FFF;
+						text-decoration: none;
+						padding:0.5em 0.5em;
+						border-bottom: 3px solid @dblue;
+						border-top: 0;
+						border-right: 0;
+						border-left: 0;
+					}
+				}
+				&:after {
+					content: "";
+					display: table;
+					clear: both;
+				}
+				div.p5625{
+					width:56.25%;
+					float:left;
+					margin-left: 6.25%;
+					padding-top:10px;
+					img{
+						position: relative;
+						width:100%;
+					}
+				}
+				&:after {
+					content: "";
+					display: table;
+					clear: both;
+				}
+			}
+			.accordeon{
+				width:56.25%;
+				margin-left:6.25%;
+				padding:1.5em 0;
+				border-top: 1px solid @grey;
+				p{
+					font-size:0.8em;
+					text-align: justify; 
+					margin-bottom: 0.8em;
+				}
+				img{
+					width:100%;
+					height: auto;
+				}
+			}
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+		}
+		.text-left{
+			div.p25{
+				text-align: right;
+				a{
+					float:right;
+				}
+			}
+			.accordeon{
+				float:right;
+				margin-left:0;
+				margin-right:6.25%;
+			}
+		}
+	}
+
+	section#profile{
+		margin-bottom:30px;
+		.cat-header{
+			margin-bottom: 20px;
+			border-top: 1px solid @grey;
+		}
+		article.p50{
+			position: relative;
+			height:100%;
+			width:88%;
+			margin:auto;
+			p{
+				text-align: justify;
+				font-size: 0.8em;
+				margin-bottom: 0.8em;
+			}
+			strong{
+				font-family: "BariolBold";
+			}
+			
+			ul#social-networks{
+				width:100%;
+				margin-top:20px;
+				li.p25{					
+					list-style: none;
+					width:25%;
+					float:left;
+					margin-left: 6.25%;				
+					a{
+						display:block;
+						position: relative;
+						width: 100%;
+						height:auto;
+						background-color:@blue;
+						border-bottom: 3px solid @dblue;
+						img{
+							display: block;
+							position: relative;
+							width:100%;
+						}
+					}
+				}
+			}
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			ul#skills{
+				width:100%;
+				li.p25{					
+					list-style: none;
+					width:25%;
+					float:left;
+					margin-left: 6.25%;
+					img{
+						display: block;
+						position: relative;
+						width:100%;
+						margin-bottom:10px;	
+					}
+					span.skill-desc{
+						display:block;
+						background-color: @white;
+						font-size: 0.7em;
+						text-align: center;
+					}
+				}
+			}
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+		}
+		article#introducing{
+			margin-top:20px;
+		}
+	}
+	section#contact{
+		background-color: @blue;
+		margin:auto;
+		.cat-header{
+			border-top: 1px solid @grey;
+		}
+		article{
+			padding:20px 6% 0 6%;
+			padding-bottom:30px;
+			p#intro-contact{
+				font-size: 0.8em;
+				font-family: "BariolRegularItalic";
+				text-align: justify;
+				color: @white;
+				padding-top: 5px;
+				margin-bottom: 10px;
+			}
+			form{
+				label{
+					font-family: "BariolBold";
+					font-size: 0.8em;
+					color:@white;
+				}
+				input, textarea{
+					width: 100%;
+					border:none;
+					background-color: @white;
+					color:#000;
+					-webkit-appearance: none;
+  					-webkit-border-radius: 0;
+				}
+				input#submit{
+					height:50px;
+					background-color: @white;
+					background-image: url("../img/icon-send.svg");
+					background-repeat: no-repeat;
+					background-size: auto 50%;
+					background-position: 0.7em center;
+					font-family: "BariolBold";
+					color:@blue;
+					margin-top:10px;
+				}
+			}
+		}
+	}
+}
+
+/*******************
+	MEDIA QUERIES
+*******************/
+
+/* Smartphones 360 */
+
+@media only screen and (min-width: 360px){
+
+	#index{
+		header#landing{
+			#intro{
+				#quote{
+					font-size:1.5em;
+				}
+				h1{
+					font-size: 0.75em;
+				}
+			}
+		}
+		.cat-header{
+			font-size: 1.2em;
+		}
+		section#projects{
+			article.project{
+				div.project-header{
+					height:125px;
+					div.p25{
+						h2{
+							font-size:1em;
+							margin-bottom: 0.3em;
+						}
+						.details{
+							font-size: 0.6em;
+						}
+					}
+				}
+			}
+		}
+		section#profile{
+			article.p50{
+				p{
+					font-size: 0.9em;
+					margin-bottom: 0.9em;
+				}			
+				ul#skills{
+					li.p25{					
+						span.skill-desc{
+							font-size: 0.9em;
+						}
+					}
+				}
+			}
+		}
+		section#contact{
+			article{
+				p#intro-contact{
+					font-size: 0.9em;
+				}
+				form{
+					label{
+						font-size: 0.9em;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* iPad */
+
+@media only screen and (min-width: 768px){
+
+	.no-mobile{
+		display:inline;
+	}
+
+	section{	/* Gestion des bordures transparentes pour le smooth scroll */
+		border-top: 60px solid transparent;
+		margin-top:-60px;
+	    -webkit-background-clip:padding-box;
+	    -moz-background-clip:padding;
+	    background-clip:padding-box;
+	}
+
+	div#nav-header{
+		img{
+			float:left;
+			margin:10px;
+		}
+		nav#main-menu{
+
+			display:block;
+			float:right;
+			margin:16px 30px 15px 0;
+			height:60px;
+
+			ul{		
+				li{
+					display:inline;
+					list-style:none;
+					font-size: 1em;
+					margin-left: 30px;
+
+					a{
+						color:#000;
+						text-decoration: none;
+						text-transform: uppercase;
+					}
+				}
+			}
+
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+		}
+	}
+
+	#index{
+		header#landing{
+			padding: 125px 10px 30px 10px;
+			#intro{
+				#knolling{
+					display:block;
+					width:70%;
+					margin:0 auto 1em auto;
+				}
+				#quote{
+					font-size:1.5em;
+				}
+				h1{
+					margin-top:0.2em;
+					font-size: 1.3em;
+				}
+			}
+		}
+		.cat-header{
+			font-size: 1.3em;
+			margin-bottom: 10px;
+		}
+		section#projects{
+			article.project{
+				padding-top:30px;
+				div.project-header{
+					height:260px;
+					div.p25{
+						h2{
+							font-size:1.2em;
+							margin-bottom: 0.1em;
+						}
+						h3{
+							font-family: BariolRegularItalic;
+							font-size:0.8em;
+							font-weight: normal;
+							margin-bottom: 1.2em;
+							display:block;
+							width:100%;
+						}
+						.details{
+							font-size: 0.9em;
+						}
+					}
+
+				}
+			}
+		}
+		section#profile{
+			margin-bottom:0;
+			article.p50{
+				p{
+					font-size: 0.9em;
+					margin-bottom: 0.9em;
+				}			
+				ul#skills{
+					width:90%;
+					margin:auto;
+					li.p25{			
+						span.skill-desc{
+							font-size: 0.8em;
+						}
+					}
+				}
+				ul#social-networks{
+					width:60%;
+					margin:30px auto 0 auto;
+				}
+			}
+			article#introducing{
+				margin-top:30px;
+			}
+		}
+		section#contact{
+			article{
+				padding:20px 15% 0 15%;
+				p#intro-contact{
+					font-size: 0.9em;
+					margin-bottom: 14px;
+				}
+				form{
+					label{
+						font-size: 0.9em;
+					}
+					input, textarea{
+						margin-bottom: 0.5em;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 1280px){
+
+	#index{
+		header#landing{
+			#intro{
+				#quote{
+					font-size:2em;
+				}
+				h1{
+					font-size: 2em;
+				}
+			}
+		}
+		.cat-header{
+			font-size: 2em;
+		}
+		section#projects{
+			article.project{
+				padding-top:60px;
+				div.project-header{
+					height:420px;
+					div.p25{
+						h2{
+							font-size:2em;
+							margin-bottom: 0.1em;
+						}
+						h3{
+							font-size:1.5em;
+							margin-bottom: 1.1em;
+						}
+						.details{
+							font-size: 1.4em;
+						}
+					}
+				}
+			}
+		}
+		section#profile{
+			margin-bottom:40px;
+			article.p50{
+				margin-top: 1.5em;
+				p{
+					font-size: 1.5em;
+					margin-bottom: 0.9em;
+				}			
+				ul#skills{
+					width:70%;
+					li.p25{			
+						span.skill-desc{
+							font-size: 1em;
+						}
+					}
+				}
+				ul#social-networks{
+					width:30%;
+				}
+			}
+			article#introducing{
+			}
+		}
+		section#contact{
+			article{
+				padding:20px 20% 0 20%;
+				p#intro-contact{
+					font-size: 1.5em;
+					margin-bottom: 1em;
+				}
+				form{
+					label{
+						font-size: 1.3em;
+					}
+					input{
+						margin-top: 0.5em;
+						height:2em;
+					}
+					textarea{
+						height:200px;
+					}
+					input, textarea{
+						margin-bottom: 0.5em;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+/* Large desktop */
+
+@media only screen and (min-width: 1600px){
+
+	section{	/* Gestion des bordures transparentes pour le smooth scroll */
+		border-top: 90px solid transparent;
+		margin-top:-90px;
+	    -webkit-background-clip:padding-box;
+	    -moz-background-clip:padding;
+	    background-clip:padding-box;
+	}
+
+	div#nav-header{
+		height:90px;
+		img{
+			height:60px;
+			margin:15px;
+		}
+		nav#main-menu{
+			margin:22px 30px 15px 0;
+			height:60px;
+			ul{		
+				li{
+					margin-left: 50px;
+					a{
+						font-size: 1.5em;
+					}
+				}
+			}
+		}
+	}
+	#index{
+		header#landing{
+			padding: 170px 15px 30px 25px;
+			#knolling{
+					margin:0 auto 0.7em auto;
+				}
+			#intro{
+				#quote{
+					font-size:3em;
+				}
+				h1{
+					font-size: 3em;
+				}
+			}
+		}
+		.cat-header{
+			font-size: 2.5em;
+		}
+		section#projects{
+			article.project{
+				padding-top:100px;
+				div.project-header{
+					height:720px;
+					div.p25{
+						h2{
+							font-size:3em;
+							margin-bottom: 0.1em;
+						}
+						h3{
+							font-size:2.5em;
+							margin-bottom: 1em;
+						}
+						.details{
+							font-size: 2em;
+						}
+					}
+				}
+				.accordeon{
+					p{
+						font-size: 2em;
+					}
+				}
+			}
+		}
+		section#profile{
+			margin-bottom:40px;
+			article.p50{
+				width:60%;
+				margin-top: 1.5em;
+				p{
+					font-size: 2em;
+					margin-bottom: 0.9em;
+				}			
+				ul#skills{
+					li.p25{			
+						span.skill-desc{
+							font-size: 1.5em;
+							margin-bottom: 0.5em;
+						}
+					}
+				}
+				ul#social-networks{
+					width:30%;
+				}
+			}
+			article#introducing{
+			}
+		}
+		section#contact{
+			article{
+				padding:20px 20% 0 20%;
+				p#intro-contact{
+					font-size: 2em;
+					margin-bottom: 1em;
+				}
+				form{
+					label{
+						font-size: 1.8em;
+					}
+					input{
+
+						height:2em;
+					}
+					textarea{
+						height:200px;
+					}
+					input, textarea{
+						margin-bottom: 0.5em;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*******************
+	   MIXINS
+*******************/
+
+@blue: #00BDFF;
+@dblue: #00AAE6;
+@white: #FFF;
+@grey: #D4D4D4;
+
+/*******************
+	FONT-FACES
+*******************/
+
+
+@font-face {
+    font-family: 'BariolRegular';
+    src: url('../fonts/BariolRegular/bariol_regular-webfont.eot');
+    src: url('../fonts/BariolRegular/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BariolRegular/bariol_regular-webfont.woff') format('woff'),
+         url('../fonts/BariolRegular/bariol_regular-webfont.ttf') format('truetype'),
+         url('../fonts/BariolRegular/bariol_regular-webfont.svg#bariol_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BariolRegularItalic';
+    src: url('../fonts/BariolRegularItalic/bariol_regular_italic-webfont.eot');
+    src: url('../fonts/BariolRegularItalic/bariol_regular_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BariolRegularItalic/bariol_regular_italic-webfont.woff') format('woff'),
+         url('../fonts/BariolRegularItalic/bariol_regular_italic-webfont.ttf') format('truetype'),
+         url('../fonts/BariolRegularItalic/bariol_regular_italic-webfont.svg#bariolregular_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BariolBold';
+    src: url('../fonts/BariolBold/bariol_bold-webfont.eot');
+    src: url('../fonts/BariolBold/bariol_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BariolBold/bariol_bold-webfont.woff') format('woff'),
+         url('../fonts/BariolBold/bariol_bold-webfont.ttf') format('truetype'),
+         url('../fonts/BariolBold/bariol_bold-webfont.svg#bariol_boldbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BariolBoldItalic';
+    src: url('../fonts/BariolBoldItalic/bariol_bold_italic-webfont.eot');
+    src: url('../fonts/BariolBoldItalic/bariol_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BariolBoldItalic/bariol_bold_italic-webfont.woff') format('woff'),
+         url('../fonts/BariolBoldItalic/bariol_bold_italic-webfont.ttf') format('truetype'),
+         url('../fonts/BariolBoldItalic/bariol_bold_italic-webfont.svg#bariol_boldbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SciFlySans';
+    src: url('../fonts/SciFlySans/scifly-sans-webfont.eot');
+    src: url('../fonts/SciFlySans/scifly-sans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SciFlySans/scifly-sans-webfont.woff') format('woff'),
+         url('../fonts/SciFlySans/scifly-sans-webfont.ttf') format('truetype'),
+         url('../fonts/SciFlySans/scifly-sans-webfont.svg#sciflysans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
