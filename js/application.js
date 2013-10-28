@@ -18,9 +18,10 @@
             // Déclenche la fonction animate()
             $('html, body').animate({  
                 scrollTop: $(the_id).offset().top  
-            }, 'slow'); 
+            }, 1000); 
 
-        });  
+        }); 
+
         // Au clic sur les éléments de classe .details (boutons)
         $('.details').on('click', function (event) {
             var the_id, accordion;
@@ -32,10 +33,13 @@
             $('.accordeon').slideUp();
 
             // If current accordion is opened, return
-            if (accordion.is(":visible")) { return false; }
+            if (accordion.is(":visible")) { 
+                return false; 
+            }
 
             // If current accordion is closed, we open it
             accordion.slideDown(400, function () {
+
                 // Déclenche la fonction animate()
                 $('html, body').animate({  
                     scrollTop: $(this).parents('.project').offset().top-$('#nav-header').height()
