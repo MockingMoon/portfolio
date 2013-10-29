@@ -31,17 +31,13 @@
 
             // Close all accordions
             $('.accordeon').slideUp();
-            $('.accordeon').children(".details").replaceAll("<button class='details'>Masquer</button>");
 
             // If current accordion is opened, return
-            if (accordion.is(":visible")) {
-                $(this).replaceWith("<button class='details'>En savoir plus</button>"); 
+            if (accordion.is(":visible")) { 
                 return false; 
             }
 
             // If current accordion is closed, we open it
-
-            $(this).replaceWith("<button class='details'>Masquer</button>");
             accordion.slideDown(400, function () {
 
                 // Déclenche la fonction animate()
