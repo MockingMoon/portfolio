@@ -24,20 +24,24 @@
 
         // Au clic sur les éléments de classe .details (boutons)
         $('.details').on('click', function (event) {
-            var the_id, accordion;
-
-            // $(this).text('hello');
+            var the_id, accordion, button;
 
             the_id    = $(this).attr("href"),
             accordion = $(this).parents('.project').children('.accordeon');
+            button    = $(this);
+
 
             // Close all accordions
-            $('.accordeon').slideUp();
+            $('.accordeon').slideUp(400, function() {
+                button.text('En savoir plus');
+            });
 
             // If current accordion is opened, return
             if (accordion.is(":visible")) { 
                 return false; 
             }
+
+            button.text('Masquer');
 
             // If current accordion is closed, we open it
             accordion.slideDown(400, function () {
