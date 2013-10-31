@@ -26,6 +26,8 @@
         $('.details').on('click', function (event) {
             var the_id, accordion;
 
+            // $(this).text('hello');
+
             the_id    = $(this).attr("href"),
             accordion = $(this).parents('.project').children('.accordeon');
 
@@ -39,7 +41,6 @@
 
             // If current accordion is closed, we open it
             accordion.slideDown(400, function () {
-
                 // Déclenche la fonction animate()
                 $('html, body').animate({  
                     scrollTop: $(this).parents('.project').offset().top-$('#nav-header').height()
